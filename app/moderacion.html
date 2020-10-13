@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="manifest" href="./manifest.json">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDN - Normalización</title>
+    <script src="./lib/js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="bar">
+        <p class="title">MiDinero</p>
+        <p id="user"></p>
+        <button class="logout" onclick="logout()">SALIR</button>
+    </div>
+    <div id="carga">CARGANDO...</div>
+    <div id="panta" style="display: none;">
+        <div class="caso">
+            <p id="idcaso"> Id 33334232 <br>
+                30 Similares
+            </p>
+        </div>
+        <div class="metricas">
+            <p id="metricas">casos </p>
+        </div>
+        <form onsubmit="norm(event)" id="formi">
+            <span>DEPARTAMENTO </span><br><input id="depto" type="text" autocomplete="off"><br><br>
+            <span>LOCALIDAD </span><br><input id="loc" type="text" autocomplete="off"><br><br>
+            <span>CALLE </span><br><input id="calle" type="text" autocomplete="off"><br><br>
+            <span>AMPLIACION </span><br><input id="amp" type="text" autocomplete="off"><br><br>
+            <span>NUMERO </span><br><input id="puer" type="text" autocomplete="off"><br><br>
+            <span>APARTAMENTO </span><br><input id="apt" type="text" autocomplete="off"><br><br>
+            <span>PISO </span><br><input id="piso" type="text" autocomplete="off"><br><br>
+            <span>BARRIO </span><br><input id="barrio" type="text" autocomplete="off"><br><br>
+            <select name="choose" id="choose">
+                <option value="ok">OK</option>
+                <option value="nl">No Localizado</option>
+                <option value="rep">REPORTAR</option>
+            </select>
+
+            <button style="margin-left: 138px;">NEXT</button>
+            
+        </form>
+    </div>
+    
+
+</body>
+<style>
+    #carga {
+        position: fixed;
+        font-size: large;
+        color: rgb(104, 104, 104);
+        left: calc(50% - 59px);
+        top: calc(50% - 10px);
+    }
+
+    .metricas {
+        position: absolute;
+        top: 55px;
+        right: 20px;
+    }
+
+    .caso {
+        position: absolute;
+        top: 55px;
+
+        left: 20px;
+    }
+
+    #formi {
+        position: absolute;
+        top: 120px;
+        width: 300px;
+        left: calc(50% - 150px);
+        margin-bottom: 30px;
+    }
+
+    #formi input {
+        width: 100%;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    button {
+        position: absolute;
+
+        background-color: #3092cf;
+        border: none;
+        padding: 6px 10px 6px 10px;
+        color: white;
+        border-radius: 3px;
+    }
+
+    #user {
+        position: absolute;
+        right: 90px;
+    }
+
+    .title {
+        position: absolute;
+        left: 10px;
+        font-size: large;
+        top: -1px;
+    }
+
+    .logout {
+        right: 10px;
+        top: 12px;
+    }
+
+    .bar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 56px;
+        left: 0;
+        background-color: white;
+        box-shadow: 0px 0px 11px 6px #0000001f;
+        z-index: 3;
+    }
+</style>
+<script src="./moderacion.js"></script>
+
+</html>

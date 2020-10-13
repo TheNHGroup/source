@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="manifest" href="./manifest.json">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDN</title>
+
+    <script src="./lib/js/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div class="form">
+        <div class="bven">
+            <p>Bienvenidx a la pantalla de normalización de datos MDN!</p>
+        </div>
+        <form onsubmit="comenzar(event)">
+            <span>Seleccionar analista</span> <select name="analista" id="namechoose" onchange="choosed(event)">
+            </select>
+
+            <input class="subi" type="submit" value="OK">
+            <br><br>
+            <div id="otro" style="display: none;"><input type="text" id="ott" placeholder="Nombre del analista"></div>
+
+        </form>
+    </div>
+
+    <div class="foot">
+        <p>By Nahu ❤</p>
+    </div>
+
+    <style>
+        .subi {
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            background-color: #3092cf;
+            border: none;
+            padding: 6px 10px 6px 10px;
+            color: white;
+            border-radius: 3px;
+        }
+
+        .bven {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #1776b1;
+            text-align: center;
+            margin: 10px;
+            margin-top: 35px;
+        }
+
+        form {
+            margin: 10px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .form {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: white;
+            position: absolute;
+            top: 80px;
+            width: 70%;
+            left: 15%;
+            bottom: 100px;
+            box-shadow: 0px 0px 11px 6px #0000001f;
+            border-radius: 10px;
+        }
+
+        .foot {
+            position: absolute;
+            top: calc(100% - 56px);
+            width: 100%;
+            height: 56px;
+            left: 0;
+            background-color: #3092cf;
+        }
+
+        .foot p {
+            text-align: center;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</body>
+<script src="./main.js"></script>
+
+</html>
